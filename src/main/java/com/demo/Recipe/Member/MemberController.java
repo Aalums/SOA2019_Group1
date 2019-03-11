@@ -20,8 +20,8 @@ public class MemberController {
 
     //ADD Member
     @PostMapping("/Menber/{id}/Proflie")
-    public void addMember(@PathVariable String memberId, Member member) {
-        memberService.addMember(memberId, member);
+    public String addMember(@PathVariable String memberId, Member member) {
+        return memberService.addMember(memberId, member);
     }
 
 }

@@ -7,7 +7,8 @@ public class MemberService {
 
     private Member member;
 
-    public void addMember(String memberId, Member member){
+    public String addMember(String memberId, Member member){
+        return "addMember";
     }
 
     public Member getMember(String memberId){
