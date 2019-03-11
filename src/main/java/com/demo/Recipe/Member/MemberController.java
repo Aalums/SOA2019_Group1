@@ -1,4 +1,4 @@
-package com.demo.Recipe.Manage;
+package com.demo.Recipe.Member;
 
 
 import com.demo.Recipe.Member.Member;
