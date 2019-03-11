@@ -1,5 +1,7 @@
 package com.demo.Recipe.Manage;
 
+import com.demo.Recipe.Menu.Menu;
+
 public class Manage {
     private String memberId;
     private String menuId;

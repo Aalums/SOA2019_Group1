@@ -3,19 +3,20 @@ package com.demo.Recipe.Menu;
 import java.util.ArrayList;
 
 public class Menu {
-
+    private String menuId;
     private String foodName;
     private int time;
     private ArrayList ingredients;
     private ArrayList directions;
-    private String type;
+    private String category;
 
-    public Menu(String foodName, int time, ArrayList ingredients, ArrayList directions, String type) {
+    public Menu(String menuId, String foodName, int time, ArrayList ingredients, ArrayList directions, String category) {
+        this.menuId = menuId;
         this.foodName = foodName;
         this.time = time;
         this.ingredients = ingredients;
         this.directions = directions;
-        this.type = type;
+        this.category = category;
     }
 
     public String getFoodName() {
@@ -50,11 +51,11 @@ public class Menu {
         this.directions = directions;
     }
 
-    public String getType() {
-        return type;
+    public String getCategory() {
+        return category;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setCategory(String type) {
+        this.category = type;
     }
 }
