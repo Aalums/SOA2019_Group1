@@ -14,25 +14,25 @@ public class MenuControllerTest {
     @Test
     public void getCategory(){
         MenuService menuService = restTemplate.getForObject("/Category" , MenuService.class);
-        assertEquals("ต้ม ผัด แกง ทอก", MenuService.getCategory.getCategory());
+        assertEquals("Category", menuService.getCategory());
     }
 
     @Test
     public void getMenuByName(){
         MenuService menuService = restTemplate.getForObject("/Category/Tomyam/Menu", MenuService.class);
-        assertEquals("Tomyam", MenuService.getMenuByname().getFoodName());
+        assertEquals("MenuName", menuService.getMenu());
     }
 
     @Test
     public void getMenuByMember(){
         MenuService menuService = restTemplate.getForObject("/Member/eyenach/Menu", MenuService.class);
-        assertEquals("eyenach", MenuService.getMenuByMember().getMember().getUsername());
+        assertEquals("eyenach", menuService.getMenu("eyenach"));
     }
 
     @Test
     public void getMenuDetail(){
-        MenuService menuService = restTemplate.getForObject("/Menu/f000001/MenuDetail", MenuService.class);
-        assertEquals("ซักอย่าง", MenuService.getMenuDetail());
+        MenuService menuService = restTemplate.getForObject("/Menu/f0000001/MenuDetail", MenuService.class);
+        assertEquals("f0000001", menuService.getMenuDetail("f0000001"));
     }
 
 
