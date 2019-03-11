@@ -3,14 +3,14 @@ package com.demo.Recipe.Manage;
 public class Manage {
     private String memberId;
     private String menuId;
-    private String menuDetail;
+    private Menu menu;
 
     public Manage() { }
 
-    public Manage(String memberId, String menuId, String menuDetail) {
+    public Manage(String memberId, String menuId, Menu menu) {
         this.memberId = memberId;
         this.menuId = menuId;
-        this.menuDetail = menuDetail;
+        this.menu = menu;
     }
 
     public String getMemberId() {
@@ -29,11 +29,11 @@ public class Manage {
         this.menuId = menuId;
     }
 
-    public String getMenuDetail() {
-        return menuDetail;
+    public Menu getMenu() {
+        return menu;
     }
 
-    public void setMenuDetail(String menuDetail) {
-        this.menuDetail = menuDetail;
+    public void setMenu(Menu menu) {
+        this.menu = menu;
     }
 }
