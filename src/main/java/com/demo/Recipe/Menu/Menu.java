@@ -8,12 +8,14 @@ public class Menu {
     private int time;
     private ArrayList ingredients;
     private ArrayList directions;
+    private String type;
 
-    public Menu(String foodName, int time, ArrayList ingredients, ArrayList directions) {
+    public Menu(String foodName, int time, ArrayList ingredients, ArrayList directions, String type) {
         this.foodName = foodName;
         this.time = time;
         this.ingredients = ingredients;
         this.directions = directions;
+        this.type = type;
     }
 
     public String getFoodName() {
@@ -46,5 +48,13 @@ public class Menu {
 
     public void setDirections(ArrayList directions) {
         this.directions = directions;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
