@@ -23,7 +23,7 @@ public class MemberControllerTest {
     @Test
     public void addMember() {
         //call controller
-        Member memberService = restTemplate.getForObject("Member/eyenach/Profile", Member.class);
+        MemberService memberService = restTemplate.getForObject("Member/eyenach/Profile", MemberService.class);
 
         //assertion
         assertEquals("addMember", memberService.addMember("eyenach", "eyenach"));
