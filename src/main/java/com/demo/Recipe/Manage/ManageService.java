@@ -1,7 +1,9 @@
 package com.demo.Recipe.Manage;
 
 import com.demo.Recipe.Menu.Menu;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ManageService {
     private Manage manage;
 

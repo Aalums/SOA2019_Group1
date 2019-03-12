@@ -7,7 +7,7 @@ public class MemberService {
 
     private Member member;
 
-    public String addMember(String memberId, String member){
+    public String addMember(String memberId){
         return "addMember";
     }
 

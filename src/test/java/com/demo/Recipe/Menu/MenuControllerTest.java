@@ -35,5 +35,4 @@ public class MenuControllerTest {
         assertEquals("f0000001", menuService.getMenuDetail("f0000001"));
     }
 
-
 }

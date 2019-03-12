@@ -1,5 +1,8 @@
 package com.demo.Recipe.Menu;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class MenuService {
     private Menu menu;
     public MenuService(){}

@@ -12,20 +12,20 @@ public class ManageController {
 
     //create new menu
     @PostMapping("/Member/{id}/Menu")
-    public String  createMenu(@PathVariable String menuId, Menu menu){
-        return manageService.createMenu(menuId, menu);
+    public String  createMenu(@PathVariable String id, Menu menu){
+        return manageService.createMenu(id, menu);
     }
 
     //update menu
     @PutMapping("/Menu/{id}/MenuDetail")
-    public String updateMenu(@PathVariable String menuId, Menu menu){
-        return manageService.updateMenu(menuId, menu);
+    public String updateMenu(@PathVariable String id, Menu menu){
+        return manageService.updateMenu(id, menu);
     }
 
     //delete menu
     @DeleteMapping("/Menu/{id}")
-    public String  deleteMenu(@PathVariable String menuId){
-        return manageService.deleteMenu(menuId);
+    public String  deleteMenu(@PathVariable String id){
+        return manageService.deleteMenu(id);
     }
 
 

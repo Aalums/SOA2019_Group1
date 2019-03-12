@@ -6,7 +6,9 @@ public class Member {
     private String username;
     private String password;
 
-    public Member(){}
+    public Member(String memberId){
+        this.username = memberId;
+    }
 
     public Member(String email, String username, String password) {
         this.email = email;

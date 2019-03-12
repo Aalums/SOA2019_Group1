@@ -13,15 +13,15 @@ public class MemberController {
     private MemberService memberService;
 
     //GET Member
-    @RequestMapping("/Member")
-    public Member getMember(@PathVariable String memberId){
-        return memberService.getMember(memberId) ;
+    @GetMapping("/Member/{id}")
+    public Member getMember(@PathVariable String id){
+        return new Member(id) ;
     }
 
     //ADD Member
-    @PostMapping("/Menber/{id}/Proflie")
-    public String addMember(@PathVariable String memberId, String member) {
-        return memberService.addMember(memberId, member);
+    @PostMapping("/Member/{id}/Proflie")
+    public String addMember(@PathVariable String id) {
+        return memberService.addMember(id);
     }
 
 }
