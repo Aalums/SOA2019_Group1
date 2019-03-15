@@ -22,7 +22,7 @@ public class MenuController {
     }
 
     @GetMapping("/Member/{id}/Menu")
-    public String getMenu(@PathVariable String id, String name){
+    public String getMenuByMember(@PathVariable String id, String name){
         return menuService.getMenu(id, name);
     }
 
