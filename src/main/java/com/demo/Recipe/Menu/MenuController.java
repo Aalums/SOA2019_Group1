@@ -12,22 +12,24 @@ public class MenuController {
     private MenuService menuService;
 
     @GetMapping("/Category")
-    public String getCategory(){
-        return menuService.getCategory();
+    public MenuService getCategory(){
+        return new MenuService();
     }
 
     @GetMapping("/Category/{name}/Menu")
-    public String getMenu(@PathVariable String name){
+    public Menu getMenu(@PathVariable String name){
         return menuService.getMenu(name);
     }
 
     @GetMapping("/Member/{id}/Menu")
-    public String getMenuByMember(@PathVariable String id, String name){
+    public Menu getMenuByMember(@PathVariable String id, String name){
+
         return menuService.getMenu(id, name);
     }
 
     @GetMapping("/Menu/{id}/MenuDetail")
-    public String getMenuDetail(@PathVariable String id){
+    public Menu getMenuDetail(@PathVariable String id){
+
         return menuService.getMenuDetail(id);
     }
 

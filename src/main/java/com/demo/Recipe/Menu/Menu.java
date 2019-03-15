@@ -4,14 +4,18 @@ import java.util.ArrayList;
 
 public class Menu {
     private String menuId;
+    private String memberId;
     private String foodName;
     private int time;
     private ArrayList ingredients;
     private ArrayList directions;
     private String category;
 
-    public Menu(String menuId, String foodName, int time, ArrayList ingredients, ArrayList directions, String category) {
+    public Menu(){}
+
+    public Menu(String menuId, String memberId, String foodName, int time, ArrayList ingredients, ArrayList directions, String category) {
         this.menuId = menuId;
+        this.memberId = memberId;
         this.foodName = foodName;
         this.time = time;
         this.ingredients = ingredients;
@@ -58,4 +62,22 @@ public class Menu {
     public void setCategory(String type) {
         this.category = type;
     }
+
+    public String getMemberId() {
+        return memberId;
+    }
+
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
+    }
+
+    public String getMenuId() {
+        menuId = "f0000001";
+        return menuId;
+    }
+
+    private void setMenuId(String menuId) {
+        this.menuId = menuId;
+    }
 }
+
