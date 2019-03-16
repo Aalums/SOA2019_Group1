@@ -40,4 +40,10 @@ public class MenuControllerTest {
         assertEquals("f0000001", menuService.getMenuDetail("f0000001").getMenuId());
     }
 
+    @Test
+    public void getMenuByMenuName(){
+        MenuService menuService = restTemplate.getForObject("/Menu/search/Tomyam", MenuService.class);
+        assertEquals("Tomyam", menuService.getMenu("Tomyam").getFoodName());
+    }
+
 }
