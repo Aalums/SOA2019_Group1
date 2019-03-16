@@ -23,7 +23,13 @@ public class MenuService {
 
     public Menu getMenu(String name){
         menu = new Menu();
-        menu.setCategory(name);
+        menu.setFoodName(name);
+        return menu;
+    }
+
+    public Menu getMenuCategory(String type){
+        menu = new Menu();
+        menu.setCategory(type);
         return menu;
     }
 

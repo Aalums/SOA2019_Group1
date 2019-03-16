@@ -20,7 +20,7 @@ public class MenuController {
     //Get Menu in Category
     @GetMapping("/Category/{type}/Menu")
     public Menu getMenu(@PathVariable String type){
-        return menuService.getMenu(type);
+        return menuService.getMenuCategory(type);
     }
 
     //Get Menu of User
@@ -36,7 +36,7 @@ public class MenuController {
     }
 
     //Get Menu By search
-    @GetMapping("/Menu?search=:{menuName}")
+    @GetMapping("/Menu/search/{menuName}")
     public Menu getMenuByMenuName(@PathVariable String menuName){
         return menuService.getMenu(menuName);
     }

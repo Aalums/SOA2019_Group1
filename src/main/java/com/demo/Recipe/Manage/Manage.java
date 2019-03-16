@@ -31,7 +31,6 @@ public class Manage {
     public void setMenuId(String menuId) {
         this.menuId = menuId;
     }
-
     public Menu getMenu() {
         return menu;
     }
