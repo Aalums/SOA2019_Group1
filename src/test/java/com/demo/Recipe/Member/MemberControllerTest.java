@@ -25,12 +25,12 @@ public class MemberControllerTest {
         assertEquals("eyenach", member.getUsername());
     }
 
-//    @Test
-//    public void addMember() {
-//        //call controller
-//        MemberService memberService = restTemplate.getForObject("Member/eyenach/Profile", MemberService.class);
-//
-//        //assertion
-//        assertEquals("addMember", memberService.addMember("eyenach", "eyenach"));
-//    }
+    @Test
+    public void addMember() {
+        //call controller
+        MemberService memberService = restTemplate.getForObject("/Member/Register/eyenach", MemberService.class);
+
+        //assertion
+        assertEquals("Success", memberService.addMember(new Member(), "eyenach"));
+    }
 }

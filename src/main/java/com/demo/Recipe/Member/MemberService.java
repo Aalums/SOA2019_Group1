@@ -7,12 +7,13 @@ public class MemberService {
 
     private Member member;
 
-    public String addMember(String memberId){
-        return "addMember";
-    }
+    public MemberService(){}
 
     public Member getMember(String memberId){
-        return member;
+        return new Member(memberId);
     }
 
+    public String addMember(Member member, String memberId){
+        return "Success";
+    }
 }

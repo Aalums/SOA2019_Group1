@@ -12,13 +12,13 @@ public class MemberController {
     //GET Member
     @GetMapping("/Member/{memberId}")
     public Member getMember(@PathVariable String memberId){
-        return new Member(memberId);
+        return memberService.getMember(memberId);
     }
 
     //ADD Member
-    @PostMapping("/Member/{memberId}/Profile")
-    public String addMember(@PathVariable String memberId) {
-        return memberService.addMember(memberId);
+    @PostMapping("/Member/Register/{memberId}")
+    public String addMember(@RequestBody Member member, @PathVariable String memberId) {
+        return memberService.addMember(member, memberId);
     }
 }
 

@@ -6,6 +6,8 @@ public class Member {
     private String username;
     private String password;
 
+    public Member(){}
+
     public Member(String memberId){
         this.username = memberId;
     }
