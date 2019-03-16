@@ -27,6 +27,7 @@ public class ManageService {
     }
 
     public String deleteMenu(String menuId){
+
         return "delete";
     }
 }
