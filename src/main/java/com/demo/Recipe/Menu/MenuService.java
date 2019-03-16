@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MenuService {
+
     private Menu menu;
 
     public MenuService(){}
@@ -15,22 +16,24 @@ public class MenuService {
     public void setMenu(Menu menu) {
         this.menu = menu;
     }
+
     public String getCategory(){
         return "Category";
     }
+
     public Menu getMenu(String name){
         menu = new Menu();
         menu.setCategory(name);
         return menu;
     }
-    public Menu getMenu(String memberId, String name){
+
+    public Menu getMenuByMember(String memberId){
         //get menu from db
         menu = new Menu();
         menu.setMemberId(memberId);
-        menu.setFoodName(name);
         return menu;
-
     }
+
     public Menu getMenuDetail(String MenuId) {
         //get menu from db 'menuId'
         menu = new Menu();

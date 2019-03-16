@@ -11,28 +11,33 @@ public class MenuController {
     @Autowired
     private MenuService menuService;
 
+    //Get All Category
     @GetMapping("/Category")
     public MenuService getCategory(){
         return new MenuService();
     }
 
-    @GetMapping("/Category/{name}/Menu")
-    public Menu getMenu(@PathVariable String name){
-        return menuService.getMenu(name);
+    //Get Menu in Category
+    @GetMapping("/Category/{type}/Menu")
+    public Menu getMenu(@PathVariable String type){
+        return menuService.getMenu(type);
     }
 
-    @GetMapping("/Member/{id}/Menu")
-    public Menu getMenuByMember(@PathVariable String id, String name){
-
-        return menuService.getMenu(id, name);
+    //Get Menu of User
+    @GetMapping("/Member/{memberId}/Menu")
+    public Menu getMenuByMember(@PathVariable String memberId){
+        return menuService.getMenuByMember(memberId);
     }
 
-    @GetMapping("/Menu/{id}/MenuDetail")
-    public Menu getMenuDetail(@PathVariable String id){
-
-        return menuService.getMenuDetail(id);
+    //Get MenuDetail of menuId
+    @GetMapping("/Menu/{menuId}/MenuDetail")
+    public Menu getMenuDetail(@PathVariable String menuId){
+        return menuService.getMenuDetail(menuId);
     }
 
-//    GET/Menu?search=:name
-
+    //Get Menu By search
+    @GetMapping("/Menu?search=:{menuName}")
+    public Menu getMenuByMenuName(@PathVariable String menuName){
+        return menuService.getMenu(menuName);
+    }
 }
