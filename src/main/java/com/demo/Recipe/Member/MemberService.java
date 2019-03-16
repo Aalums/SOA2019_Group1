@@ -13,7 +13,7 @@ public class MemberService {
         return new Member(memberId);
     }
 
-    public String addMember(Member member, String memberId){
+    public String addMember(String memberId){
         return "Success";
     }
 }

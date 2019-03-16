@@ -16,9 +16,11 @@ public class MemberController {
     }
 
     //ADD Member
-    @PostMapping("/Member/Register/{memberId}")
-    public String addMember(@RequestBody Member member, @PathVariable String memberId) {
-        return memberService.addMember(member, memberId);
+    @RequestMapping(value = "/Register",
+    produces = "application/json",
+    method = {RequestMethod.GET, RequestMethod.POST})
+    public String addMember() {
+        return memberService.addMember("phpond");
     }
 }
 

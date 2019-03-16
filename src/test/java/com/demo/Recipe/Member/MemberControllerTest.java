@@ -31,6 +31,6 @@ public class MemberControllerTest {
         MemberService memberService = restTemplate.getForObject("/Member/Register/eyenach", MemberService.class);
 
         //assertion
-        assertEquals("Success", memberService.addMember(new Member(), "eyenach"));
+        assertEquals("Success", memberService.addMember("eyenach"));
     }
 }
