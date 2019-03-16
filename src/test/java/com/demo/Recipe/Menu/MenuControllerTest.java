@@ -31,7 +31,7 @@ public class MenuControllerTest {
     @Test
     public void getMenuByMember(){
         MenuService menuService = restTemplate.getForObject("/Member/eyenach/Menu", MenuService.class);
-        assertEquals("eyenach", menuService.getMenu("eyenach", "Tomyam").getMemberId());
+        assertEquals("eyenach", menuService.getMenuByMember("eyenach").getMemberId());
     }
 
     @Test
