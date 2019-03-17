@@ -29,8 +29,8 @@ public class ManageControllerTest{
                 }
         @Test
         public void deleteMenu(){
-                //Manage manage = restTemplate.getForObject("/Menu/f0000001" ,Manage.class);
-                //assertEquals("f0000001" ,manage.getMenuId());
+                ManageService manageService = restTemplate.getForObject("/Menu/f0000001" ,ManageService.class);
+                assertEquals("delete" ,manageService.deleteMenu("f0000001"));
                 }
 
         }
