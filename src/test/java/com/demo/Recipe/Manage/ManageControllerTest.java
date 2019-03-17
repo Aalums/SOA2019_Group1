@@ -18,8 +18,8 @@ public class ManageControllerTest{
 
         @Test
         public void createMenu(){
-                Manage manage = restTemplate.getForObject("/Member/eyenach/Menu" ,Manage.class);
-                assertEquals("eyenach" ,manage.getMemberId());
+                Manage manage = restTemplate.getForObject("/Member/eyenach/menu/new" ,Manage.class);
+                assertEquals("eyenach" , manage.getMemberId());
                 }
 
         @Test

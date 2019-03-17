@@ -11,20 +11,21 @@ public class ManageController {
     private ManageService manageService;
 
     //create new menu
-    @PostMapping("/Member/{memberId}/Menu")
-    public String  createMenu(@PathVariable String memberId, Menu menu){
+    @RequestMapping(value = "/Member/{memberId}/menu/new",
+            method = {RequestMethod.GET, RequestMethod.POST})
+    public Manage  createMenu(@PathVariable("memberId") String memberId, Menu menu){
         return manageService.createMenu(memberId, menu);
     }
 
     //update menu
-    @PutMapping("/Menu/{menuId}/MenuDetail")
-    public String updateMenu(@PathVariable String menuId, Menu menu){
+    @RequestMapping(value = "/Menu/{menuId}/MenuDetail/update",
+            method = {RequestMethod.GET, RequestMethod.PUT})
+    public Manage updateMenu(@PathVariable String menuId, Menu menu){
         return manageService.updateMenu(menuId, menu);
     }
 
     //delete menu
     @RequestMapping(value = "/deleteMenu",
-            produces = "application/json",
             method = {RequestMethod.GET, RequestMethod.DELETE})
     public String deleteMenu() {
         return manageService.deleteMenu("f0000001");

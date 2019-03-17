@@ -18,12 +18,16 @@ public class ManageService {
         this.manage = manage;
     }
 
-    public String updateMenu(String menuId, Menu menu){
-        return "update";
+    public Manage updateMenu(String menuId, Menu menu){
+        manage = new Manage();
+        manage.setMenuId(menuId);
+        return manage;
     }
 
-    public String createMenu(String menuId, Menu menu){
-        return "add";
+    public Manage createMenu(String memberId, Menu menu){
+        manage = new Manage();
+        manage.setMemberId(memberId);
+        return manage;
     }
 
     public String deleteMenu(String menuId){
