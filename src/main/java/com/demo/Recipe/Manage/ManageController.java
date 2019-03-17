@@ -23,8 +23,11 @@ public class ManageController {
     }
 
     //delete menu
-    @DeleteMapping("/Menu/{menuId}")
-    public String  deleteMenu(@PathVariable String menuId){
-        return manageService.deleteMenu(menuId);
+    @RequestMapping(value = "/deleteMenu",
+            produces = "application/json",
+            method = {RequestMethod.GET, RequestMethod.DELETE})
+    public String deleteMenu() {
+        return manageService.deleteMenu("f0000001");
     }
 }
+
