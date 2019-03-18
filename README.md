@@ -19,6 +19,6 @@
   * get recipe - /Menu/{menuId}/MenuDetail
   * get menu by search - /Menu/search/{menuName}
 * Manage Service
-  * create new menu - /Member/{memberId}/Menu
-  * update menu - /Menu/{menuId}/MenuDetail
-  * delete menu - /Menu/{menuId}
+  * create new menu - /Member/{memberId}/Menu/New
+  * update menu - /Menu/{menuId}/MenuDetail/Update
+  * delete menu - /DeleteMenu
