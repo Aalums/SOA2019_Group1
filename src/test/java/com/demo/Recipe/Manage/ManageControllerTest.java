@@ -30,7 +30,7 @@ public class ManageControllerTest{
         @Test
         public void deleteMenu(){
                 ManageService manageService = restTemplate.getForObject("/Menu/f0000001" ,ManageService.class);
-                assertEquals("delete" ,manageService.deleteMenu("f0000001"));
+                assertEquals("Delete" ,manageService.deleteMenu("f0000001"));
                 }
 
         }
