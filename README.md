@@ -22,3 +22,6 @@
   * create new menu - /Member/{memberId}/Menu/New
   * update menu - /Menu/{menuId}/MenuDetail/Update
   * delete menu - /DeleteMenu
+
+## DEPLOY
+* http://recipe-235414.appspot.com/
