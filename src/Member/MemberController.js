@@ -15,7 +15,7 @@ router.get('/', memberService.getAllUser);
 // API GET/member/:memberId
 router.get('/:memberId', memberService.getUserById);
 
-// API POST/register
-express.post('/register', memberService.postUser);
+// API POST/member/register
+router.post('/register', memberService.postUser);
 
 module.exports = router;

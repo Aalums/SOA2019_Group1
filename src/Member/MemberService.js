@@ -23,5 +23,6 @@ exports.getUserById = function(req, res) {
 
 // Post User (Register)
 exports.postUser = function(req, res) {
-
+    var json = req.body;
+    res.send('Add new ' + json.username + ' Completed!')
 };
