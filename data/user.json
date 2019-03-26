@@ -1,0 +1,26 @@
+[{
+  "username": "aal",
+  "email": "aal@gmail.com",
+  "password": "123456",
+  "name": "Aal Ums"
+}, {
+    "username": "eye",
+    "email": "eye@gmail.com",
+    "password": "123456",
+    "name": "Nan Cho"
+}, {
+  "username": "pond",
+  "email": "pond@gmail.com",
+  "password": "123456",
+  "name": "Pond Phpond"
+}, {
+  "username": "pin",
+  "email": "pin@gmail.com",
+  "password": "123456",
+  "name": "Pin praewpan"
+}, {
+  "username": "ron",
+  "email": "ron@gmail.com",
+  "password": "123456",
+  "name": "Ron Saran"
+}]
