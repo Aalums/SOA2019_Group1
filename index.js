@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({
 var memberController = require("./src/Member/MemberController");
 app.use("/member", memberController);
 
+var menuController = require("./src/Menu/MenuController");
+app.use("/category", menuController);
+
 /* run port 8080 */
 app.listen(port, function() {
     console.log('Starting node.js on port ' + port);

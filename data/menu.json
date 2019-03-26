@@ -1,0 +1,29 @@
+[
+  {
+    "menuId": 1,
+    "memberId": "eyenach",
+    "foodName": "TomYumKung",
+    "time": 30,
+    "ingredients": "array of ingredients",
+    "directions": "array of directions",
+    "category": "Tom"
+  },
+  {
+    "menuId": 2,
+    "memberId": "eyenach",
+    "foodName": "Pranang",
+    "time": 30,
+    "ingredients": "array of ingredients",
+    "directions": "array of directions",
+    "category": "Pad"
+  },
+  {
+    "menuId": 3,
+    "memberId": "eyenach",
+    "foodName": "FriedRice",
+    "time": 30,
+    "ingredients": "array of ingredients",
+    "directions": "array of directions",
+    "category": "Pad"
+  }
+]
