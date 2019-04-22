@@ -1,0 +1,6 @@
+com\recipe\service\manage\controller\ManageController.class
+com\recipe\service\manage\info\Menu.class
+com\recipe\service\manage\service\ManageService.class
+com\recipe\service\manage\model\Manage.class
+com\recipe\service\manage\repository\ManageReposity.class
+com\recipe\service\manage\ManageApplication.class

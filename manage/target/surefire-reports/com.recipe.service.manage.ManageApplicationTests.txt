@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.recipe.service.manage.ManageApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.857 s - in com.recipe.service.manage.ManageApplicationTests
