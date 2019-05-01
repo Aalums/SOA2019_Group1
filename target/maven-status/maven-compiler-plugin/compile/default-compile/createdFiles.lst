@@ -1,0 +1,10 @@
+com\demo\Recipe\Member\Member.class
+com\demo\Recipe\Manage\ManageController.class
+com\demo\Recipe\Menu\MenuService.class
+com\demo\Recipe\RecipeApplication.class
+com\demo\Recipe\Manage\Manage.class
+com\demo\Recipe\Menu\MenuController.class
+com\demo\Recipe\Manage\ManageService.class
+com\demo\Recipe\Menu\Menu.class
+com\demo\Recipe\Member\MemberController.class
+com\demo\Recipe\Member\MemberService.class

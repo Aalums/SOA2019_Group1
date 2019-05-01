@@ -1,0 +1,4 @@
+com\demo\Recipe\Member\MemberControllerTest.class
+com\demo\Recipe\Manage\ManageControllerTest.class
+com\demo\Recipe\Menu\MenuControllerTest.class
+com\demo\Recipe\RecipeApplicationTests.class
