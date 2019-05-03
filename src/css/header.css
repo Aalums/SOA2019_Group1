@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgba(67, 67, 69, 1);
+    --green-color: rgba(119,193,87,1);
+    --green-color-two: rgba(66,181,116,1);
+}
+
+body {
+    font-family: lato,Helvetica,Arial,sans-serif;
+    font-size: 20px;
+}
+
+*:focus {
+    outline: none;
+}
+
+/*--Header--*/
+
+header {
+    color: #000000;
+    background-color: #FFFFFF;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*z-index: 999;*/
+    height: 100px;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 2em auto;
+}
+
+.logo > a {
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    font-weight: 900;
+    color: #000000;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    font-size: .75em;
+    font-weight: 700;
+}
+
+.nav-items {
+    width: 100%;
+}
+
+.nav-items > ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.nav-items ul li > a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+.nav-items ul div div > a{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    list-style-type: none;
+}
+/* Dropdown Menu */
+
+input[type="checkbox"]:not(.toggler) {       /*All checkboxes should be hidden except toggler, we'll deal with it later  */
+    visibility: hidden;
+}
+
+
+.drop1 {
+    position: relative;
+}
+
+.drop-menu {
+    overflow: hidden;
+    position: absolute;
+    top: 3em;
+    left: 0;
+    background-color: #FFFFFF;
+    font-size: .8em;
+    text-align: start;
+    visibility: hidden;
+    cursor: pointer;
+    opacity: 0;
+    z-index: -1;
+    max-height: 0;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+
+
+.drop-menu > a {
+    padding: .9em 6em .9em 1.3em;
+    white-space: nowrap;
+}
+
+
+.nav-items label {
+    cursor: pointer;
+}
+
+.drop1 label a {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.drop1 label a i {
+    display: none;
+}
+
+/* hover effects*/
+
+.nav-items ul li:first-child {
+    border-bottom: 2px solid var(--green-color);
+}
+
+.nav-items ul li a:hover,
+.nav-items label:hover  {
+    /*border-bottom: 2px solid var(--green-color);*/
+    /*-webkit-transition: all .2s ease;*/
+    /*-moz-transition: all .2s ease;*/
+    /*-o-transition: all .2s ease;*/
+    /*transition: all .2s ease;*/
+    background-color:#C3E7FA;
+}
+
+.drop-menu > a:hover {
+    background-color:#C3E7FA;
+}
+
+
+/* hamburger */
+
+
+.toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+}
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+/* Hamburger Line */
+.hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.hamburger > div::before,
+.hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+/* Moving Line Down */
+.hamburger > div::after {
+    top: 10px;
+}
+
+
+/* Animation */
+
+.toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+
+.toggler:checked + .hamburger > div::before,
+.toggler:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+
+.toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+
+
+
+/*--------------------------Header Media Queries---------------------------*/
+@media screen and (min-width: 45.6em) {
+    .nav-items .drop1:hover > .drop-menu,
+    .nav-items .drop2:hover > .drop-menu {
+        visibility: visible;
+        max-height: 2000px;
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 45.6em) {
+    header {
+        width: 100%;
+        height: 70px;
+    }
+
+
+    .logo {
+        align-self: center;
+        justify-self: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo a {
+        height: 70px;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+    .navbar {
+        width: 0;
+        background-color: #000;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        z-index: 1;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+        visibility: hidden;
+        white-space: nowrap;
+    }
+
+
+    .nav-items ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: .6em;
+    }
+
+
+    .nav-items ul li:hover {
+        background-color: #212121;
+    }
+
+
+    .nav-items ul li {
+        width: 100%;
+        cursor: pointer;
+        text-align: start;
+    }
+
+
+    .nav-items ul li a{
+        width: 100%;
+        display: block;
+        padding: 1em 0;
+        padding-left: 1em;
+    }
+
+
+    .nav-items ul li:first-child {
+        border-bottom: none;
+    }
+
+
+    .nav-items ul li a:hover,
+    .nav-items label:hover  {
+        border-bottom: none;
+    }
+
+
+
+
+    /* icon */
+    .drop1 label a i,
+    .drop2 label a i{
+        display: inline;
+        position: absolute;
+        right: 0;
+    }
+
+
+    input[type="checkbox"]:not(.toggler):checked ~ label > a > i {
+        transform: rotate(180deg);
+    }
+
+
+    /* dropdown menu */
+    .nav-items ul li div:nth-child(3)  > a {
+        padding-left: 30px;
+    }
+
+    .drop-menu {
+        position: static;
+    }
+
+
+    .hamburger {
+        opacity: 1;
+    }
+
+    .toggler:checked ~ .navbar {
+        visibility: visible;
+        width: 250px;
+        -webkit-transition: width 300ms ease-in-out;
+        -moz-transition: width 300ms ease-in-out;
+        -o-transition: width 300ms ease-in-out;
+        transition: width 300ms ease-in-out;
+    }
+
+    /* Changing from hover to checkbox for dropdown */
+
+    input[type="checkbox"]:not(.toggler) {
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 50px;
+        z-index: 999;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:not(.toggler):checked ~ .drop-menu {
+        visibility: visible;
+        max-height: 2000px;
+        opacity: 1;
+        z-index: 1;
+    }
+}
