@@ -18,31 +18,31 @@ public class MenuControllerTest {
 
     @Test
     public void getCategory(){
-        MenuService menuService = restTemplate.getForObject("/Category", MenuService.class);
+        MenuService menuService = restTemplate.getForObject("/category", MenuService.class);
         assertEquals("Category", menuService.getCategory());
     }
 
     @Test
     public void getMenu(){
-        Menu menu = restTemplate.getForObject("/Category/Bold/Menu", Menu.class);
+        Menu menu = restTemplate.getForObject("/category/Bold/menu", Menu.class);
         assertEquals("Bold", menu.getCategory());
     }
 
     @Test
     public void getMenuByMember(){
-        MenuService menuService = restTemplate.getForObject("/Member/eyenach/Menu", MenuService.class);
+        MenuService menuService = restTemplate.getForObject("/member/eyenach/menu", MenuService.class);
         assertEquals("eyenach", menuService.getMenuByMember("eyenach").getMemberId());
     }
 
     @Test
     public void getMenuDetail(){
-        MenuService menuService = restTemplate.getForObject("/Menu/f0000001/MenuDetail", MenuService.class);
+        MenuService menuService = restTemplate.getForObject("/menu/f0000001/menuDetail", MenuService.class);
         assertEquals("f0000001", menuService.getMenuDetail("f0000001").getMenuId());
     }
 
     @Test
     public void getMenuByMenuName(){
-        MenuService menuService = restTemplate.getForObject("/Menu/search/Tomyam", MenuService.class);
+        MenuService menuService = restTemplate.getForObject("/menu/search/Tomyam", MenuService.class);
         assertEquals("Tomyam", menuService.getMenu("Tomyam").getFoodName());
     }
 
