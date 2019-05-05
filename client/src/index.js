@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import HomeApp from './home/HomeApp';
 import LoginApp from "./login/LoginApp";
 import RegisterApp from "./register/RegisterApp";
+import MenuApp from "./menu/MenuApp";
 
 import {Router, Route, browserHistory} from 'react-router';
 import * as serviceWorker from './serviceWorker';
@@ -14,6 +15,7 @@ ReactDOM.render(
         <Route path="/home" component={HomeApp}/>
         <Route path="/login" component={LoginApp}/>
         <Route path="/register" component={RegisterApp}/>
+        <Route path="type/menu" component={MenuApp}/>
     </Router>, document.getElementById('root')
 );
 
