@@ -1,0 +1,50 @@
+h2 {
+    margin: 2px;
+}
+
+.menu-right {
+    margin: 0px;
+    padding-right: 10px;
+    float: right;
+}
+
+a:hover {
+    color: black;
+}
+
+.black {
+    background-color: #444444;
+    color: white;
+}
+
+.column {
+    float: left;
+    width: 22%;
+    padding: 10px;
+    height: auto;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.row {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
