@@ -1,0 +1,36 @@
+.cell-row {
+    display: table;
+    width: 100%;
+}
+.cell {
+    display: table-cell;
+}
+.topic {
+    width: 50%;
+    padding: 20px;
+}
+.wrapper-detail {
+    max-width: 1280px;
+    margin-top: 8em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.detail {
+    margin-left: 5em;
+    margin-right: 5em;
+}
+.detail-row {
+    display: table;
+    width: -webkit-fill-available;
+}
+.detail-col {
+    display: table-cell;
+}
+.detail-info {
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+}
+.align-center {
+    text-align: center;
+}
