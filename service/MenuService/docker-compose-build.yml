@@ -1,0 +1,11 @@
+version: '3'
+services:
+  menu:
+    build:
+      context: ./MenuService
+    ports:
+      - "80:8080"
+
+  manage:
+    build:
+      context: ./manage_service

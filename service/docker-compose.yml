@@ -1,0 +1,9 @@
+version: '3'
+services:
+  menu:
+    image: aalums/menu_service:1.0
+    ports:
+      - "80:8080"
+
+  manage:
+    image: aalums/manage_service:1.0
