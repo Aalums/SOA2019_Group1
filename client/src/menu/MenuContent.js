@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from "axios";
+import {browserHistory} from "react-router";
 import 'font-awesome/css/font-awesome.min.css';
 import '../css/menu.css';
 
@@ -27,7 +28,7 @@ class MenuContent extends Component {
                 <div className="wrapper-menu">
                     <div className="row">
                         {this.state.menus.map(menus => (
-                        <a className="column white" href="/menu/detail">
+                        <a className="column white" onClick="/menu/detail">
                             <h2>Tum Yum Kung | {menus.id}</h2>
                             {/*<h2>Tum Yum Kung | {menus.foodName}</h2>*/}
                             <div className="cat_star">

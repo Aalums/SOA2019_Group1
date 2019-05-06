@@ -5,18 +5,22 @@ import '../css/detail.css';
 class DetailContent extends Component{
 
     state = {
-        menus: []
+        menu: [],
+        ingredient: [],
+        direction: []
     }
 
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/users')
-        // axios.get('http://localhost:8083/category/{type}/menu')
+        axios.get('https://jsonplaceholder.typicode.com/users/' + 1)
+        // axios.get('http://localhost:8083//menu/{menuId}/menudetail')
             .then(res => {
                 console.log(res);
-                this.setState({menus: res.data});
-                if(menus.id == 1){
+                this.setState({
+                    menu: res.data,
+                    ingredient: res.data.address,
+                    direction: res.data.company
+                });
 
-                }
             })
             .catch(error => {
                 console.log(error);
@@ -29,7 +33,7 @@ class DetailContent extends Component{
                 <div className="wrapper-detail">
                     <div className="cell-row white">
                         <div className="topic cell">
-                            <h3>Tom Yum Kung</h3>
+                            <h3>Tun Yum Kung | {this.state.menu.id}</h3>
                         </div>
                         <div className="topic cell">
                             <img width="-webkit-fill-available"
@@ -60,6 +64,7 @@ class DetailContent extends Component{
 
                     <div className="white padding align-center">
                         <h3>Ingredients</h3>
+                        <h6>{this.state.ingredient.street}</h6>
                     </div>
 
                     <br></br>
