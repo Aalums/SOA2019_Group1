@@ -1,0 +1,99 @@
+h1, h2 {
+    text-align: center;
+    font-family: lato,Helvetica,Arial,sans-serif;
+    font-size: 25px;
+}
+
+hr {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#add-new {
+    background: white;
+    width: 40%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+#recipe-card {
+    padding: 10px;
+}
+
+#save-btn {
+    padding: 20px;
+}
+
+#cancel-btn {
+    padding: 20px;
+}
+
+.add-btn {
+    text-align: center;
+}
+
+.detail {
+    padding: 10px;
+    margin-left: 0%;
+}
+
+.wrapper-manage {
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.level {
+    margin: 5px;
+    padding: 15px 32px;
+}
+
+.manage-text {
+    text-align: center;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon {
+    width: 50%;
+}
+
+button {
+    width: 40%;
+    background-color: white;
+    border: none;
+    color: #444444;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(83, 90, 96, 0.16);
+    box-shadow: 0 10px 30px 0 rgba(83, 90, 96, 0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 10px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover  {
+    background-color: #444444;
+    color: white;
+}
+
+button:active  {
+    -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
