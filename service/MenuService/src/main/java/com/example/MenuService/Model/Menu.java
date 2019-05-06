@@ -1,19 +1,33 @@
-package com.example.MenuService;
+package com.example.MenuService.Model;
 
+import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
+@Entity
+@Table(name = "menu", schema = "menu")
 public class Menu {
+
+    @Id
     private String menuId;
+
+    @Column(name="memberId", nullable = true)
     private String memberId;
     private String foodName;
     private int time;
-    private ArrayList ingredients;
-    private ArrayList directions;
+
+    @Column(columnDefinition="TEXT")
+    private String ingredients;
+
+    @Column(columnDefinition="TEXT")
+    private String directions;
+
     private String category;
 
     public Menu(){}
 
-    public Menu(String menuId, String memberId, String foodName, int time, ArrayList ingredients, ArrayList directions, String category) {
+    public Menu(String menuId, String memberId, String foodName, int time, String ingredients, String directions, String category) {
         this.menuId = menuId;
         this.memberId = memberId;
         this.foodName = foodName;
@@ -35,35 +49,42 @@ public class Menu {
         return time;
     }
 
-    public void setTime(int time) {
-        this.time = time;
+//    public void setTime(int time) {
+//        this.time = time;
+//    }
+
+    public List<String> getIngredients() {
+        String _ingredients[] = ingredients.split(",");
+        List<String> in = new ArrayList<String>();
+        in = Arrays.asList(_ingredients);
+        return in;
     }
 
-    public ArrayList getIngredients() {
-        return ingredients;
+//    public void setIngredients(String ingredients) {
+//        this.ingredients = ingredients;
+//    }
+
+    public List<String> getDirections() {
+        String _directions [] = directions.split(",");
+        List<String> di = new ArrayList<String>();
+        di = Arrays.asList(_directions);
+        return di;
     }
 
-    public void setIngredients(ArrayList ingredients) {
-        this.ingredients = ingredients;
-    }
-
-    public ArrayList getDirections() {
-        return directions;
-    }
-
-    public void setDirections(ArrayList directions) {
-        this.directions = directions;
-    }
+//    public void setDirections(String directions) {
+//        this.directions = directions;
+//    }
 
     public String getCategory() {
-        return category;
+        return this.category;
     }
 
-    public void setCategory(String type) {
-        this.category = type;
-    }
+//    public void setCategory(String type) {
+//        this.category = type;
+//    }
 
     public String getMemberId() {
+
         return memberId;
     }
 
@@ -72,11 +93,10 @@ public class Menu {
     }
 
     public String getMenuId() {
-        menuId = "f0000001";
         return menuId;
     }
 
-    private void setMenuId(String menuId) {
-        this.menuId = menuId;
-    }
+//    private void setMenuId(String menuId) {
+//        this.menuId = menuId;
+//    }
 }

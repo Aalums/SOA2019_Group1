@@ -1,9 +1,22 @@
 import React, {Component} from 'react';
+import {browserHistory} from "react-router";
+
 import HeaderMember from '../HeaderMember';
 import '../css/mymenu.css'
 import 'font-awesome/css/font-awesome.min.css';
 
 class MymenuApp extends Component {
+
+    constructor() {
+        super();
+
+        this.newRecipe = this.newRecipe.bind(this);
+    }
+
+    newRecipe(){
+        browserHistory.push("/addmenu");
+    }
+
     render() {
         return (
             <div>
@@ -12,10 +25,10 @@ class MymenuApp extends Component {
                 </header>
 
                 <div className="site-content">
-                    <div className="wrapper-detail black">
-                        <h3 className="align-center">My Menu
-                            <a className="menu-right" href="/addmenu">+ add menu</a>
-                        </h3>
+                    <div className="wrapper-detail">
+                        <h3 className="align-center">My Menu</h3>
+                        <div id="add-new" className="add-btn" onClick={this.newRecipe}><i className="fa fa-plus"></i> Add New</div>
+
                         <div className="row">
                             <a className="column white" href="/menu/detail">
                                 <h2>Tum Yum Kung</h2>

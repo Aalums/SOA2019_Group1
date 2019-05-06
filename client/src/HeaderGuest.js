@@ -16,8 +16,8 @@ class HeaderGuest extends Component {
                                     <li>
                                         <div className="drop1">
                                             <input type="checkbox" id="drop1"/>
-                                            <label htmlFor="drop1"><a href="">Profile<i
-                                                className="material-icons">keyboard_arrow_down</i></a></label>
+                                            <label htmlFor="drop1"><a>Profile
+                                                <i className="material-icons">keyboard_arrow_down</i></a></label>
                                             <div className="drop-menu">
                                                 <a href="/login">Login</a>
                                                 <a href="/register">Register</a>

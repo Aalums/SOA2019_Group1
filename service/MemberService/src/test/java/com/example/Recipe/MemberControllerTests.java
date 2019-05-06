@@ -7,6 +7,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.IOException;
+import java.util.concurrent.ExecutionException;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
@@ -19,13 +22,14 @@ public class MemberControllerTests {
     @Test
     public void getMember(){
         MemberService memberservice = restTemplate.getForObject("/Member/0001", MemberService.class);
-        assertEquals("0001", memberservice.getMember("0001").getMemberId());
+        assertEquals("0001", memberservice.getMember("0001").getUsername());
     }
 
     @Test
-    public void addMember(){
+    public void addMember() throws ExecutionException, InterruptedException, IOException {
+        Member member = new Member("ron", "ron@gmail.com", "123456", "ron" );
         MemberService memberservice = restTemplate.getForObject("/Menber/0002/Proflie", MemberService.class);
-        assertEquals("success", memberservice.addMember("0002", "qwerty"));
+        assertEquals("success", memberservice.addMember(member.getUsername(), member.getEmail(), member.getPassword(), member.getName()));
 
     }
 

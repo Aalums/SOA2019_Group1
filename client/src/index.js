@@ -7,6 +7,7 @@ import RegisterApp from "./register/RegisterApp";
 import MenuApp from "./menu/MenuApp";
 import DetailApp from "./menudetail/DetailApp";
 import Mymenu from "./mymenu/Mymenu";
+import ManageMenu from "./managemenu/ManageMenu";
 
 import {Router, Route, browserHistory} from 'react-router';
 import * as serviceWorker from './serviceWorker';
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route path="type/menu" component={MenuApp}/>
         <Route path="/menu/detail" component={DetailApp}/>
         <Route path="/member/menu" component={Mymenu}/>
+        <Route path="/addmenu" component={ManageMenu}/>
     </Router>, document.getElementById('root')
 );
 

@@ -16,12 +16,12 @@ class HeaderMember extends Component {
                                     <li>
                                         <div className="drop1">
                                             <input type="checkbox" id="drop1"/>
-                                            <label htmlFor="drop1"><a href="">Profile<i
-                                                className="material-icons">keyboard_arrow_down</i></a></label>
+                                            <label htmlFor="drop1"><a>Profile
+                                                <i className="material-icons">keyboard_arrow_down</i></a></label>
                                             <div className="drop-menu">
-                                                <a href="/mymenu">My Menu</a>
+                                                <a href="/member/menu">My Menu</a>
                                                 <a href="/addmenu">Add Menu</a>
-                                                <a href="">Logout</a>
+                                                <a href="/home">Logout</a>
                                             </div>
                                         </div>
                                     </li>
