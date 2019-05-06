@@ -48,9 +48,4 @@ public class MenuController {
         return menuRepository.findByMenuId(menuId);
     }
 
-    //Get Menu By search
-    @GetMapping("/menu/search/{menuName}")
-    public Menu getMenuByMenuName(@PathVariable String menuName){
-        return menuRepository.findByFoodName(menuName);
-    }
 }

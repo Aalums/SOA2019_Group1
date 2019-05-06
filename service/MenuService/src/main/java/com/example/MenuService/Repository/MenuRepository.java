@@ -13,4 +13,6 @@ public interface MenuRepository extends CrudRepository<Menu, String> {
     ArrayList<Menu> findMenuByMemberId(String memberId);
     Menu findByMenuId(String menuId);
     Menu findByFoodName(String foodName);
+
+
      }

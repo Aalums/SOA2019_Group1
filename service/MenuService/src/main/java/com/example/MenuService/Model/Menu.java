@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Entity
-@Table(name = "menu", schema = "menu")
+@Table(name = "menu", schema = "")
 public class Menu {
 
     @Id
@@ -49,9 +49,9 @@ public class Menu {
         return time;
     }
 
-//    public void setTime(int time) {
-//        this.time = time;
-//    }
+    public void setTime(int time) {
+        this.time = time;
+    }
 
     public List<String> getIngredients() {
         String _ingredients[] = ingredients.split(",");
@@ -60,9 +60,9 @@ public class Menu {
         return in;
     }
 
-//    public void setIngredients(String ingredients) {
-//        this.ingredients = ingredients;
-//    }
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
+    }
 
     public List<String> getDirections() {
         String _directions [] = directions.split(",");
@@ -71,17 +71,17 @@ public class Menu {
         return di;
     }
 
-//    public void setDirections(String directions) {
-//        this.directions = directions;
-//    }
+    public void setDirections(String directions) {
+        this.directions = directions;
+    }
 
     public String getCategory() {
         return this.category;
     }
 
-//    public void setCategory(String type) {
-//        this.category = type;
-//    }
+    public void setCategory(String type) {
+        this.category = type;
+    }
 
     public String getMemberId() {
 
@@ -96,7 +96,7 @@ public class Menu {
         return menuId;
     }
 
-//    private void setMenuId(String menuId) {
-//        this.menuId = menuId;
-//    }
+    public void setMenuId(String menuId) {
+        this.menuId = menuId;
+    }
 }

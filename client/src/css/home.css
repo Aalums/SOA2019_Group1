@@ -66,14 +66,11 @@ input#search {
     border-radius: 5px;
 }
 
-.display {
-    max-width: 1500px;
-}
-
 .center-fit {
     width: -webkit-fill-available;
     max-height: 25em;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*Category*/

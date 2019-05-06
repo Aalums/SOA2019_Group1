@@ -1,13 +1,15 @@
-package com.example.MemberService;
+package com.example.Recipe;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-public class MemberServiceApplication {
+@EnableEurekaClient
+public class RecipeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MemberServiceApplication.class, args);
+		SpringApplication.run(RecipeApplication.class, args);
 	}
 
 }
