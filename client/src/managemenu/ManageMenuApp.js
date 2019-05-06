@@ -73,14 +73,23 @@ class Manage extends Component {
                     <label>Menu Name</label>
                     <br></br>
                     <input type="text" name="title" placeholder="title"/>
-
                     <hr></hr>
+                    <br></br>
+
+                    <label>Category</label>
+                    <br></br>
+                    <input type="radio" name="category" value="boiled"/> Boiled
+                    <input type="radio" name="category" value="fried"/> Fried
+                    <input type="radio" name="category" value="baked"/> Baked
+                    <br></br>
                     <br></br>
 
                     <label>Time to Cook</label>
                     <br></br>
                     <input type="text" name="time" placeholder="15 mins"/>
                     <br></br>
+                    <br></br>
+
                     <label>Level</label>
                     <br></br>
                     <select id="level" className="level">
@@ -89,10 +98,11 @@ class Manage extends Component {
                         <option value="hard">Hard</option>
                     </select>
                     <br></br>
+                    <br></br>
+
                     <label>Dishes</label>
                     <br></br>
                     <input type="text" name="dishes" placeholder="2-3"/>
-
                     <hr></hr>
                     <br></br>
 

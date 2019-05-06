@@ -97,3 +97,7 @@ button:active  {
     -ms-transform: scale(0.95);
     transform: scale(0.95);
 }
+
+input[type=radio] {
+    margin-left: 2em;
+}
