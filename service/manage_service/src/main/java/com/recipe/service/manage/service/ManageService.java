@@ -16,28 +16,26 @@ public class ManageService {
     @Autowired
     ManageRepository manageRepository;
 
-    private Manage manage;
+    private Manage manage = new Manage();
     private String menuId = "";
+    private Menu menu;
 
     /*
     1. createMenu (ManageService) -> insertMenuToDB (ManageRepo)
     *  param Menu menu
     *  return Manage manage
     */
-    public Manage createMenu(String memberId, Menu menu, MenuFromWeb menuFromWeb){
+    public Manage createMenu(MenuFromWeb menuFromWeb){
 
         //set menu
-        menu = setMenu(menu, memberId, menuFromWeb);
+        menu = setMenu(menuFromWeb.getMemberId(), menuFromWeb);
 
         //set menu id
         menu.setMenuId(setNewMenuId(menu.getCategory()));
         menuFromWeb.setMenuId(menu.getMenuId());
 
         //set manage
-        manage = new Manage();
-        manage.setMemberId(memberId);
-        manage.setMenu(menuFromWeb);
-        manage.setMenuId(menuFromWeb.getMenuId());
+        manage = setManage(menuFromWeb);
 
         //call repo //save menu
         manageRepository.save(menu);
@@ -51,23 +49,34 @@ public class ManageService {
     *  param Menu menu
     *  return Manage manage
     */
+    public Manage updateMenu(MenuFromWeb menuFromWeb){
+        //set menu
+        menu = setMenu(menuFromWeb.getMemberId(), menuFromWeb);
+        menu.setMenuId(menuFromWeb.getMenuId());
+
+        //set manage
+        manage = setManage(menuFromWeb);
+
+        //call repo //save menu
+        manageRepository.save(menu);
+
+        return manage;
+    }
 
     /*
-    3. deleteMenu (ManageService) -> deleteMenuToDB (ManageRepo)
-    *  param Menu menu
-    *  return Manage manage
-    */
-
-    /*
-    4. setNewMenuId (ManageService) -> getLastId (ManageRepo)
+    3. setNewMenuId (ManageService) -> getLastId (ManageRepo)
     *  param String category
     *  return String newMenuId
     */
     public String setNewMenuId(String category){
         try{
-            checkCategory(category, menuId);
-            //call repo
-            menuId += String.format("%07d", manageRepository.countAllByCategoryEquals(category)+1);
+            if(category.equals("test")){
+                menuId = "X0000000";
+            }else{
+                checkCategory(category);
+                //call repo
+                menuId += String.format("%07d", manageRepository.countAllByCategoryEquals(category)+1);
+            }
             System.out.println("menu id : "+menuId);
         }catch (Exception e){
             System.out.println(e.getMessage());
@@ -78,35 +87,48 @@ public class ManageService {
 
 
     /*
-    5. checkCategory
+    4. checkCategory
     *  param String category, String menuId
     *  return String menuId
     */
-    public String checkCategory(String category, String menuId){
-        if(category.equals("tom")){
+    public String checkCategory(String category){
+        if(category.equals("boiled")){
             menuId = "T";
         }else if(category.equals("fried")){
             menuId = "F";
         }
-        else{
-            menuId = "E";
+        else if(category.equals("baked")){
+            menuId = "B";
         }
         return menuId;
     }
 
-    public Menu setMenu(Menu menu, String memberId, MenuFromWeb menuFromWeb){
+    public Menu setMenu(String memberId, MenuFromWeb menuFromWeb){
         menu = new Menu();
         menu.setMemberId(memberId);
         menu.setFoodName(menuFromWeb.getFoodName());
 
         String ingredients = "";
+        int count = 0;
         for(String i : menuFromWeb.getIngredients()){
-            ingredients += i+",";
+            count++;
+            if(menuFromWeb.getIngredients().size() == count){
+                ingredients += i;
+            }else{
+                ingredients += i+",";
+            }
+
         }
 
         String directions = "";
+        count = 0;
         for(String i : menuFromWeb.getDirections()){
-            directions += i+",";
+            count++;
+            if(menuFromWeb.getDirections().size() == count){
+                directions += i;
+            }else {
+                directions += i + ",";
+            }
         }
 
         menu.setIngredients(ingredients);
@@ -115,5 +137,15 @@ public class ManageService {
         menu.setCategory(menuFromWeb.getCategory());
 
         return menu;
+    }
+
+    public Manage setManage(MenuFromWeb menuFromWeb){
+
+        //set manage
+        manage.setMemberId(menuFromWeb.getMemberId());
+        manage.setMenu(menuFromWeb);
+        manage.setMenuId(menuFromWeb.getMenuId());
+
+        return manage;
     }
 }

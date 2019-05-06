@@ -6,6 +6,8 @@ import com.recipe.service.manage.model.Manage;
 import com.recipe.service.manage.service.ManageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -22,45 +24,51 @@ public class ManageController {
 
     private Manage manage;
     private Menu menu;
+    private String resultDel;
 
     @Bean
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }
 
-    //home
-    @GetMapping("/")
-    public String home(){
-        return "welcome manageeeee";
-    }
-
     //create new menu (POST)
-//    @RequestMapping(value = "/member/{memberId}/menu/new",
-//            method = {RequestMethod.GET, RequestMethod.POST})
     @PostMapping("/member/{memberId}/menu/new")
-    public ResponseEntity<Object> createNewMenu(@PathVariable String memberId, @RequestBody MenuFromWeb menuFromWeb) throws Exception{
-
-        //set up
+    public ResponseEntity<?> createNewMenu(@PathVariable String memberId, @RequestBody MenuFromWeb menuFromWeb) throws Exception{
 
         //call service create menu
-        manage = manageService.createMenu(memberId, menu, menuFromWeb);
-        System.out.println("manage2 : "+manage);
-
-        //save to db
-        System.out.println("post info : "+manage.getMenu());
+        manage = new Manage();
+        menuFromWeb.setMemberId(memberId);
+        manage = manageService.createMenu(menuFromWeb);
 
         //create resource location
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-                .replacePath("/member/{memberId}/menu/{menuid}/menudetail")
+                .replacePath("/member/{memberId}/menu/{menuid}")
                 .build(manage.getMemberId(), manage.getMenuId());
 
-        return ResponseEntity.created(location).body(menuFromWeb);
+        ResponseEntity.created(location);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(manage);
     }
 
-//
-//    public Manage fallback(String memberid) {
-//        Manage manage = new Manage();
-//        manage.setMemberId(memberid);
-//        return manage;
-//    }
+    //update menu (PUT)
+    @PutMapping("/member/{memberId}/menu/{menuId}/update")
+    public ResponseEntity<?> updateMenu(@PathVariable String memberId, @PathVariable String menuId, @RequestBody MenuFromWeb menuFromWeb){
+
+        //call service create menu
+        manage = new Manage();
+        menuFromWeb.setMemberId(memberId);
+        menuFromWeb.setMenuId(menuId);
+        manage = manageService.updateMenu(menuFromWeb);
+
+        //create resource location
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+                .replacePath("/member/{memberId}/menu/{menuId}")
+                .build(manage.getMemberId(), manage.getMenuId());
+
+        ResponseEntity.created(location);
+
+        return ResponseEntity.status(HttpStatus.OK).body(manage);
+    }
+
+
 }
