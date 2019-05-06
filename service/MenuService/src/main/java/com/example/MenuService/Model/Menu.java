@@ -1,4 +1,4 @@
-package com.example.MenuService;
+package com.example.MenuService.Model;
 
 import java.util.ArrayList;
 

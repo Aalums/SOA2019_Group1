@@ -1,6 +1,7 @@
-package com.example.MenuService;
+package com.example.MenuService.Service;
 
 
+import com.example.MenuService.Model.Menu;
 import org.springframework.stereotype.Service;
 
 @Service
