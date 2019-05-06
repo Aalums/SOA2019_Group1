@@ -18,7 +18,7 @@ ReactDOM.render(
         <Route path="/home" component={HomeApp}/>
         <Route path="/login" component={LoginApp}/>
         <Route path="/register" component={RegisterApp}/>
-        <Route path="type/menu" component={MenuApp}/>
+        <Route path="/type/menu" component={MenuApp}/>
         <Route path="/menu/detail" component={DetailApp}/>
         <Route path="/member/menu" component={Mymenu}/>
         <Route path="/addmenu" component={ManageMenu}/>

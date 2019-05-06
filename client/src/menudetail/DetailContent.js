@@ -1,7 +1,28 @@
 import React, {Component} from 'react';
+import axios from 'axios'
 import '../css/detail.css';
 
 class DetailContent extends Component{
+
+    state = {
+        menus: []
+    }
+
+    componentDidMount() {
+        axios.get('https://jsonplaceholder.typicode.com/users')
+        // axios.get('http://localhost:8083/category/{type}/menu')
+            .then(res => {
+                console.log(res);
+                this.setState({menus: res.data});
+                if(menus.id == 1){
+
+                }
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
     render() {
         return (
             <div className="site-content">
@@ -44,7 +65,7 @@ class DetailContent extends Component{
                     <br></br>
 
                     <div className="white padding align-center">
-                        <h3>Steps</h3>
+                        <h3>Directions</h3>
                     </div>
                 </div>
             </div>

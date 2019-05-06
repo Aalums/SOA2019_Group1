@@ -16,7 +16,7 @@ class HeaderMember extends Component {
                                     <li>
                                         <div className="drop1">
                                             <input type="checkbox" id="drop1"/>
-                                            <label htmlFor="drop1"><a>Profile
+                                            <label htmlFor="drop1"><a>Member
                                                 <i className="material-icons">keyboard_arrow_down</i></a></label>
                                             <div className="drop-menu">
                                                 <a href="/member/menu">My Menu</a>

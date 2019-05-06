@@ -1,14 +1,32 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import './css/home.css';
 import './css/menu.css';
 
 class Content extends Component {
+
+    state = {
+        category: []
+    }
+
+    //get data from endpoint
+    componentDidMount() {
+        axios.get('http://localhost:8083/category')
+            .then(res => {
+                console.log(res);
+                this.setState({category: res.data});
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
     render() {
         return (
             <div className="site-content">
                 <div>
-                    <img src="https://s3.amazonaws.com/artprofmedia/2018/09/26211621/Clar_NYTCooking_WIP2-1366x800.jpg"
-                         className="display center-fit"/>
+                    <img src="http://static.asiawebdirect.com/m/bangkok/portals/bangkok-com/homepage/food-top10/pagePropertiesImage/thai-som-tum.jpg"
+                         className="center-fit"/>
                 </div>
 
                 <div className="space-line">

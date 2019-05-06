@@ -6,13 +6,10 @@ class HomeApp extends Component {
     render() {
         return (
             <div>
-                <header className="top">
-                    <HeaderGuest/>
-                </header>
+                <HeaderGuest/>
 
-                <body>
-                    <Content/>
-                </body>
+                <Content/>
+
             </div>
         );
     }

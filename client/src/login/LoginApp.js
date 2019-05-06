@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {browserHistory} from "react-router";
+import axios from 'axios';
 
 import HeaderGuest from '../HeaderGuest';
 import '../css/login.css';
@@ -12,6 +13,7 @@ class LoginApp extends Component {
     }
 
     loginHandle(){
+        // browserHistory.push("http://localhost:8083/menu/eye/menudetail");
         browserHistory.push("/member/menu");
     }
 
