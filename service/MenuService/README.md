@@ -22,4 +22,6 @@ GET menu's user
 GET recipe 
 - http://localhost:8080/menu/menu/{menuId}/menuDetail
 
+GET menu by search 
+- http://localhost:8080/menu/menu/search/{menuName}
 
