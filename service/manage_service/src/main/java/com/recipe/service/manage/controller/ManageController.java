@@ -1,8 +1,10 @@
 package com.recipe.service.manage.controller;
 
 import com.recipe.service.manage.info.Menu;
+import com.recipe.service.manage.info.MenuFromWeb;
 import com.recipe.service.manage.model.Manage;
 import com.recipe.service.manage.service.ManageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,8 +17,11 @@ import java.util.ArrayList;
 @RestController
 public class ManageController {
 
-    private ManageService manageService = new ManageService();
+    @Autowired
+    private ManageService manageService;
+
     private Manage manage;
+    private Menu menu;
 
     @Bean
     public RestTemplate restTemplate(){
@@ -30,24 +35,15 @@ public class ManageController {
     }
 
     //create new menu (POST)
-    @RequestMapping(value = "/member/{memberId}/menu/new",
-            method = {RequestMethod.GET, RequestMethod.POST})
-//    @PostMapping("/member/{memberId}/menu/new")
-    public ResponseEntity<Object> createNewMenu(@PathVariable String memberId, @RequestBody Menu menu) throws Exception{
+//    @RequestMapping(value = "/member/{memberId}/menu/new",
+//            method = {RequestMethod.GET, RequestMethod.POST})
+    @PostMapping("/member/{memberId}/menu/new")
+    public ResponseEntity<Object> createNewMenu(@PathVariable String memberId, @RequestBody MenuFromWeb menuFromWeb) throws Exception{
 
-        //create body
-//        ArrayList<String> ingredient = new ArrayList<>();
-//        ingredient.add("mushroom");
-//        ingredient.add("shrimp");
-//
-//        ArrayList<String> directions = new ArrayList<>();
-//        directions.add("tom");
-//        directions.add("add topping");
-//
-//        menu = new Menu("phpond", null, "tom-yam", 30, ingredient, directions , "tom");
+        //set up
 
         //call service create menu
-        manage = manageService.createMenu(memberId, menu);
+        manage = manageService.createMenu(memberId, menu, menuFromWeb);
         System.out.println("manage2 : "+manage);
 
         //save to db
@@ -58,7 +54,7 @@ public class ManageController {
                 .replacePath("/member/{memberId}/menu/{menuid}/menudetail")
                 .build(manage.getMemberId(), manage.getMenuId());
 
-        return ResponseEntity.created(location).body(menu);
+        return ResponseEntity.created(location).body(menuFromWeb);
     }
 
 //

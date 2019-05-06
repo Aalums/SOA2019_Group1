@@ -1,29 +1,21 @@
 package com.recipe.service.manage.info;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "menu", schema = "menus")
-public class Menu {
-    @Id
+import java.util.ArrayList;
+
+public class MenuFromWeb {
     private String menuId;
 
-    @Column(name="memberId", nullable = true)
     private String memberId;
     private String foodName;
     private int time;
 
-    @Column(columnDefinition="TEXT")
-    private String ingredients;
+    private ArrayList<String> ingredients;
 
-    @Column(columnDefinition="TEXT")
-    private String directions;
+    private ArrayList<String> directions;
 
     private String category;
-    
+
 
     public String getFoodName() {
         return foodName;
@@ -41,19 +33,19 @@ public class Menu {
         this.time = time;
     }
 
-    public String getIngredients() {
+    public ArrayList<String> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(String ingredients) {
+    public void setIngredients(ArrayList<String> ingredients) {
         this.ingredients = ingredients;
     }
 
-    public String getDirections() {
+    public ArrayList<String> getDirections() {
         return directions;
     }
 
-    public void setDirections(String directions) {
+    public void setDirections(ArrayList<String> directions) {
         this.directions = directions;
     }
 
@@ -81,5 +73,3 @@ public class Menu {
         this.menuId = menuId;
     }
 }
-
-

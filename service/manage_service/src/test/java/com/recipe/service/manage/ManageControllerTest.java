@@ -1,6 +1,7 @@
 package com.recipe.service.manage;
 
 import com.recipe.service.manage.info.Menu;
+import com.recipe.service.manage.info.MenuFromWeb;
 import com.recipe.service.manage.model.Manage;
 import org.junit.Assert;
 import org.junit.Test;
@@ -44,30 +45,35 @@ public class ManageControllerTest {
         URI uri = new URI(baseUrl);
 
         //create body
-        ArrayList<String> ingredient = new ArrayList<>();
-        ingredient.add("mushroom");
-        ingredient.add("shrimp");
+        ArrayList<String> ingredients = new ArrayList<>();
+        ingredients.add("mushroom");
+        ingredients.add("shrimp");
 
         ArrayList<String> directions = new ArrayList<>();
         directions.add("tom");
         directions.add("add topping");
 
-        Menu menu = new Menu("phpond", "f0000005", "tom-yam", 30, ingredient, directions , "tom");
+        MenuFromWeb menu = new MenuFromWeb();
+        menu.setMemberId("phpond");
+        menu.setMenuId("f0000005");
+        menu.setFoodName("tom-yam");
+        menu.setTime(30);
+        menu.setIngredients(ingredients);
+        menu.setDirections(directions);
+        menu.setCategory("tom");
 
         HttpHeaders headers = new HttpHeaders();
         headers.set("X-COM-PERSIST", "true");
 
-        HttpEntity<Menu> request = new HttpEntity<>(menu, headers);
+        HttpEntity<MenuFromWeb> request = new HttpEntity<>(menu, headers);
         System.out.println("request : "+request);
 
         ResponseEntity<String> result = this.restTemplate.postForEntity(uri, request, String.class);
 
-        //Verify request succeed
+//        Verify request succeed
         Assert.assertEquals(201, result.getStatusCodeValue());
 
-
-//        Manage manage = restTemplate.getForObject("/member/phpond/menu/new", Manage.class);
-//        assertEquals("tom-yam", manage.getMenu().toString().toLowerCase());
+        Assert.assertEquals(201, 201);
     }
 
 

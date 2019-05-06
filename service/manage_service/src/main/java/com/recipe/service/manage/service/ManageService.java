@@ -1,31 +1,46 @@
 package com.recipe.service.manage.service;
 
 import com.recipe.service.manage.info.Menu;
+import com.recipe.service.manage.info.MenuFromWeb;
 import com.recipe.service.manage.model.Manage;
-import com.recipe.service.manage.repository.ManageReposity;
+import com.recipe.service.manage.repository.ManageRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.sql.SQLException;
 
 //connect to repo
+@Service
 public class ManageService {
 
-    private ManageReposity manageReposity = new ManageReposity();
+    @Autowired
+    ManageRepository manageRepository;
+
     private Manage manage;
+    private String menuId = "";
 
     /*
     1. createMenu (ManageService) -> insertMenuToDB (ManageRepo)
     *  param Menu menu
     *  return Manage manage
     */
-    public Manage createMenu(String memberId, Menu menu){
+    public Manage createMenu(String memberId, Menu menu, MenuFromWeb menuFromWeb){
+
+        //set menu
+        menu = setMenu(menu, memberId, menuFromWeb);
+
         //set menu id
         menu.setMenuId(setNewMenuId(menu.getCategory()));
+        menuFromWeb.setMenuId(menu.getMenuId());
+
         //set manage
         manage = new Manage();
         manage.setMemberId(memberId);
-        manage.setMenu(menu);
-        manage.setMenuId(menu.getMenuId());
+        manage.setMenu(menuFromWeb);
+        manage.setMenuId(menuFromWeb.getMenuId());
 
-        //call repo
-//        manageReposity.insertMenuToDB(menu);
+        //call repo //save menu
+        manageRepository.save(menu);
 
         //return manage
         return manage;
@@ -49,11 +64,15 @@ public class ManageService {
     *  return String newMenuId
     */
     public String setNewMenuId(String category){
-        String menuId = "";
-        menuId = checkCategory(category, menuId);
-        //call repo
-        menuId += String.format("%07d", manageReposity.getLastId(category));
-        System.out.println("menu id : "+menuId);
+        try{
+            checkCategory(category, menuId);
+            //call repo
+            menuId += String.format("%07d", manageRepository.countAllByCategoryEquals(category)+1);
+            System.out.println("menu id : "+menuId);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
         return menuId;
     }
 
@@ -75,4 +94,26 @@ public class ManageService {
         return menuId;
     }
 
+    public Menu setMenu(Menu menu, String memberId, MenuFromWeb menuFromWeb){
+        menu = new Menu();
+        menu.setMemberId(memberId);
+        menu.setFoodName(menuFromWeb.getFoodName());
+
+        String ingredients = "";
+        for(String i : menuFromWeb.getIngredients()){
+            ingredients += i+",";
+        }
+
+        String directions = "";
+        for(String i : menuFromWeb.getDirections()){
+            directions += i+",";
+        }
+
+        menu.setIngredients(ingredients);
+        menu.setDirections(directions);
+        menu.setTime(menuFromWeb.getTime());
+        menu.setCategory(menuFromWeb.getCategory());
+
+        return menu;
+    }
 }
