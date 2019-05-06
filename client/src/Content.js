@@ -11,7 +11,7 @@ class Content extends Component {
 
     //get data from endpoint
     componentDidMount() {
-        axios.get('http://localhost:8083/category')
+        axios.get('http://localhost:8080/menu/category')
             .then(res => {
                 console.log(res);
                 this.setState({category: res.data});

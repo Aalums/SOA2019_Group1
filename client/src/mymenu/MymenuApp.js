@@ -14,6 +14,7 @@ class MymenuApp extends Component {
     componentDidMount() {
         //get url api
         axios.get('https://jsonplaceholder.typicode.com/users')
+        // axios.get('http://localhost:8083/menu/member/'+'phpond'+'/menu')
             .then(res => {
                 console.log(res);
                 this.setState({menus: res.data});
@@ -22,7 +23,6 @@ class MymenuApp extends Component {
 
     newRecipe(){
         browserHistory.push("/addmenu");
-        // axios.get()
     }
 
     render() {
@@ -42,18 +42,16 @@ class MymenuApp extends Component {
 
                             <div className="row">
                                 {this.state.menus.map(menus => (
-                                <a className="column white" href="/menu/detail">
+                                <a className="column white" href="/editmenu">
                                     <h2>Tum Yum Kung | {menus.id}</h2>
+                                    {/*<h2>{menus.foodName}</h2>*/}
                                     <figure className="space-line">
                                         <img width="294" height="196"
                                              src="https://img.lezizyemeklerim.com/tarif/5578/limonata-tarifi_b1dc05859381615b8854ff374da0fcc9/343x229.jpg"/>
                                     </figure>
                                     <div className="other_details space-line">
-                                        <div className="view">
-                                            <i className="fa fa-eye"></i> 13.2B
-                                        </div>
                                         <div className="likes">
-                                            <i className="fa fa-heart"></i> 120
+                                            <i className="fa fa-heart"></i> Hard
                                         </div>
                                         <div className="user">
                                             <h7>{menus.username}</h7>

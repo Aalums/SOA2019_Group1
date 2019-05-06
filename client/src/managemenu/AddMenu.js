@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import HeaderMember from '../HeaderMember';
-import ManageMenuApp from './ManageMenuApp';
+import ManageMenuApp from './AddMenuApp';
 
-class ManageMenu extends Component {
+class AddMenu extends Component {
+
     render() {
         return (
             <div>
@@ -10,9 +11,9 @@ class ManageMenu extends Component {
 
                 <ManageMenuApp/>
 
-            </div>
+                </div>
         );
     }
 }
 
-export default ManageMenu;
+export default AddMenu;

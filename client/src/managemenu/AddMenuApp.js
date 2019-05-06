@@ -1,21 +1,19 @@
 import React, {Component} from 'react';
 import {browserHistory} from "react-router";
-import '../css/manage.css'
+import axios from 'axios';
+import '../css/manage.css';
 
-class Manage extends Component {
+class AddMenuApp extends Component {
 
-    constructor() {
-        super();
-
-        // set initial state
-        this.state = {
-            id: "",
-            title: "",
-            ingredients: [],
-            directions: []
-        }
-
-        this.addDirection = this.addDirection.bind(this);
+    // set initial state
+    state = {
+        title: "",
+        category: "",
+        time: "",
+        level: "",
+        dish: "",
+        ingredients: [],
+        directions: []
     }
 
     //IngredientList
@@ -58,9 +56,39 @@ class Manage extends Component {
         this.setState({directions: this.state.directions})
     }
 
-    handleSubmit(e){
+    handleTitle = event => {
+        this.setState({ title: event.target.value });
+    }
+
+    handleCate = event => {
+        this.setState({ category: event.target.value });
+    }
+
+    handleTime = event => {
+        this.setState({ time: event.target.value });
+    }
+
+    handleLevel = event => {
+        this.setState({ level: event.target.value });
+    }
+
+    handleDish = event => {
+        this.setState({ dish: event.target.value });
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+
+        const user = {
+            name: this.state.name
+        };
 
         //send to http request
+        axios.post('http://localhost:8080/member/phpond/menu/new', {user})
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+            })
 
         browserHistory.push("/member/menu")
     }
@@ -72,27 +100,27 @@ class Manage extends Component {
                 <div className="wrapper-manage manage-text white">
                     <label>Menu Name</label>
                     <br></br>
-                    <input type="text" name="title" placeholder="title"/>
+                    <input type="text" name="title" placeholder="title" onChange={this.handleTitle} />
                     <hr></hr>
                     <br></br>
 
                     <label>Category</label>
                     <br></br>
-                    <input type="radio" name="category" value="boiled"/> Boiled
-                    <input type="radio" name="category" value="fried"/> Fried
-                    <input type="radio" name="category" value="baked"/> Baked
+                    <input type="radio" name="category" value="boiled" onChange={this.handleCate}/> Boiled
+                    <input type="radio" name="category" value="fried" onChange={this.handleCate}/> Fried
+                    <input type="radio" name="category" value="baked" onChange={this.handleCate}/> Baked
                     <br></br>
                     <br></br>
 
                     <label>Time to Cook</label>
                     <br></br>
-                    <input type="text" name="time" placeholder="15 mins"/>
+                    <input type="text" name="time" placeholder="15 mins" onChange={this.handleTime}/>
                     <br></br>
                     <br></br>
 
                     <label>Level</label>
                     <br></br>
-                    <select id="level" className="level">
+                    <select id="level" className="level" onChange={this.handleLevel}>
                         <option value="easy">Easy</option>
                         <option value="medium">Medium</option>
                         <option value="hard">Hard</option>
@@ -102,7 +130,7 @@ class Manage extends Component {
 
                     <label>Dishes</label>
                     <br></br>
-                    <input type="text" name="dishes" placeholder="2-3"/>
+                    <input type="text" name="dishes" placeholder="2-3" onChange={this.handleDish}/>
                     <hr></hr>
                     <br></br>
 
@@ -148,4 +176,4 @@ class Manage extends Component {
     }
 }
 
-export default Manage;
+export default AddMenuApp;
