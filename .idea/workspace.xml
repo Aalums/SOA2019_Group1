@@ -14,13 +14,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/manage_service/src/main/java/com/recipe/service/manage/controller/ManageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+            <state relative-caret-position="280">
+              <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#959#960#0" expanded="true" />
+                <element signature="e#1000#1001#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -35,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service/manage_service/src/main/java/com/recipe/service/manage/service/ManageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="42" column="34" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="34" />
+            <state relative-caret-position="568">
+              <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -48,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/service/manage_service/src/main/java/com/recipe/service/manage/info/MenuFromWeb.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -57,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/service/manage_service/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-line="9" selection-end-column="67" />
+              <caret selection-end-line="10" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -78,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/service/manage_service/src/main/java/com/recipe/service/manage/info/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/manage_service/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="57" column="21" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="57" selection-end-column="21" />
+            <state relative-caret-position="191">
+              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -98,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/manage_service/src/test/java/com/recipe/service/manage/ManageControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="1244">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
             </state>
           </provider>
         </entry>
@@ -500,7 +502,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556976399379" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../workshop-microservice-with-java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/service/MemberService" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -554,7 +556,7 @@
       <workItem from="1556721831749" duration="249000" />
       <workItem from="1556794811003" duration="720000" />
       <workItem from="1556987794583" duration="7578000" />
-      <workItem from="1557147633039" duration="6069000" />
+      <workItem from="1557147633039" duration="6451000" />
     </task>
     <task id="LOCAL-00001" summary="fix build error">
       <created>1557153253724</created>
@@ -570,11 +572,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557160379977</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="try to add sql but not complete2">
+      <created>1557169114106</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1557169114106</updated>
+    </task>
+    <task id="LOCAL-00004" summary="try to add sql but not complete2">
+      <created>1557169141086</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557169141086</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21765000" />
+    <option name="totallyTimeSpent" value="22147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -587,7 +603,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17399268" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -629,7 +644,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix build error" />
     <MESSAGE value="try to add sql but not complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="try to add sql but not complete" />
+    <MESSAGE value="try to add sql but not complete2" />
+    <option name="LAST_COMMIT_MESSAGE" value="try to add sql but not complete2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Member/MemberController.js" />
@@ -729,22 +745,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/manage_service/src/test/java/com/recipe/service/manage/ManageControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="1244">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service/manage_service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="57" column="21" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="57" selection-end-column="21" />
+        <state relative-caret-position="191">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service/manage_service/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="9" selection-end-column="67" />
+          <caret selection-end-line="10" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -761,7 +777,7 @@
     <entry file="file://$PROJECT_DIR$/service/manage_service/src/main/java/com/recipe/service/manage/info/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -775,27 +791,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/manage_service/src/main/java/com/recipe/service/manage/service/ManageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="42" column="34" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/manage_service/src/main/java/com/recipe/service/manage/info/MenuFromWeb.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service/manage_service/src/main/java/com/recipe/service/manage/controller/ManageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+        <state relative-caret-position="280">
+          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/manage_service/src/main/java/com/recipe/service/manage/service/ManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="57" column="23" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
         </state>
       </provider>
     </entry>
