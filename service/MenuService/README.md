@@ -20,8 +20,6 @@ GET menu's user
 - http://localhost:8080/menu/member/{memberId}/menu
 
 GET recipe 
-- http://localhost:8080/menu/menu/{menuId}/menuDetail
+- http://localhost:8080/menu/menu/{menuId}/menudetail
 
-GET menu by search 
-- http://localhost:8080/menu/menu/search/{menuName}
 
