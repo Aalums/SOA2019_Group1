@@ -27,25 +27,25 @@ public class MenuController {
     //Get All Category
     @GetMapping(path="/category")
     public @ResponseBody  Iterable<Menu> getCategory(){
-        return menuRepository.findAll();
+        return       menuService.getCategory();
     }
 
     //Get Menu in Category
     @GetMapping(path = "/category/{type}/menu")
     public @ResponseBody  ArrayList<Menu>  getMenu(@PathVariable String type){
-        return menuRepository.findMenuByCategory(type);
+        return menuService.getMenuCategory(type);
     }
 
     //Get Menu of User
     @GetMapping("/member/{memberId}/menu")
     public @ResponseBody  ArrayList<Menu> getMenuByMember(@PathVariable String memberId){
-        return menuRepository.findMenuByMemberId(memberId);
+        return menuService.getMenuByMember(memberId);
    }
 
     //Get MenuDetail of menuId
     @GetMapping("/menu/{menuId}/menudetail")
     public  @ResponseBody  Menu  getMenuDetail(@PathVariable String menuId){
-        return menuRepository.findByMenuId(menuId);
+        return menuService.getMenuDetail(menuId);
     }
 
 }
