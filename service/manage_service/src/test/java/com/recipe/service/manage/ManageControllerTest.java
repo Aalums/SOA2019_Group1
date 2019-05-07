@@ -64,57 +64,57 @@ public class ManageControllerTest {
     @Test
     public void createNewMenu() throws Exception {
 
-//        menu = new MenuFromWeb();
-//        menu = setMenu();
-//
-//        //create manage
-//        manage = new Manage();
-//        manage.setMemberId(menu.getMemberId());
-//        manage.setMenu(menu);
-//        manage.setMenuId(menu.getMenuId());
-//
-//        //test
-//        final String baseUrl = "http://localhost:"+randomServerPort+"/member/phpond/menu/new";
-//        URI uri = new URI(baseUrl);
-//
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.set("X-COM-PERSIST", "true");
-//
-//        HttpEntity<MenuFromWeb> request = new HttpEntity<>(menu, headers);
-//
-//        ResponseEntity<String> result = this.restTemplate.postForEntity(uri, request, String.class);
-//
-//        //Verify request succeed
-//        Assert.assertEquals(201, result.getStatusCodeValue());
+        menu = new MenuFromWeb();
+        menu = setMenu();
+
+        //create manage
+        manage = new Manage();
+        manage.setMemberId(menu.getMemberId());
+        manage.setMenu(menu);
+        manage.setMenuId(menu.getMenuId());
+
+        //test
+        final String baseUrl = "http://localhost:"+randomServerPort+"/member/phpond/menu/new";
+        URI uri = new URI(baseUrl);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("X-COM-PERSIST", "true");
+
+        HttpEntity<MenuFromWeb> request = new HttpEntity<>(menu, headers);
+
+        ResponseEntity<String> result = this.restTemplate.postForEntity(uri, request, String.class);
+
+        //Verify request succeed
+        Assert.assertEquals(201, result.getStatusCodeValue());
 
     }
 
     @Test
     public void updateMenu() throws Exception {
 
-//        menu = new MenuFromWeb();
-//        menu = setMenu();
-//        menu.setTime(50);
-//
-//        //create manage
-//        manage = new Manage();
-//        manage.setMemberId(menu.getMemberId());
-//        manage.setMenu(menu);
-//        manage.setMenuId(menu.getMenuId());
-//
-//        //test
-//        final String baseUrl = "http://localhost:"+randomServerPort+"/member/phpond/menu/X0000000/update";
-//        URI uri = new URI(baseUrl);
-//
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.set("X-COM-PERSIST", "true");
-//
-//        HttpEntity<MenuFromWeb> request = new HttpEntity<>(menu, headers);
-//
-//        ResponseEntity<String> result = this.restTemplate.exchange(uri, HttpMethod.PUT, request, String.class);
-//
-//        //Verify request succeed
-//        Assert.assertEquals(200, result.getStatusCodeValue());
+        menu = new MenuFromWeb();
+        menu = setMenu();
+        menu.setTime(50);
+
+        //create manage
+        manage = new Manage();
+        manage.setMemberId(menu.getMemberId());
+        manage.setMenu(menu);
+        manage.setMenuId(menu.getMenuId());
+
+        //test
+        final String baseUrl = "http://localhost:"+randomServerPort+"/member/phpond/menu/X0000000/update";
+        URI uri = new URI(baseUrl);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("X-COM-PERSIST", "true");
+
+        HttpEntity<MenuFromWeb> request = new HttpEntity<>(menu, headers);
+
+        ResponseEntity<String> result = this.restTemplate.exchange(uri, HttpMethod.PUT, request, String.class);
+
+        //Verify request succeed
+        Assert.assertEquals(200, result.getStatusCodeValue());
 
     }
 
