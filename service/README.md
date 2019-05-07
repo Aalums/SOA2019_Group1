@@ -10,18 +10,17 @@
 
  ## API	
 * Member Service	
-  * get member - /Member/{memberId}	
-  * add member - /Register	
+  * get member - /member/{memberId}	
+  * add member - /member/add
 * Menu Service	
-  * get all category - /Category	
-  * get menu in category - /Category/{type}/Menu	
-  * get menu's user - /Member/{memberId}/Menu	
-  * get recipe - /Menu/{menuId}/MenuDetail	
-  * get menu by search - /Menu/search/{menuName}	
+  * get all category - /menu/category
+  * get menu in category - /menu/category/{type}/menu
+  * get menu's user - /menu/member/{memberId}/menu
+  * get recipe - /menu/menu/{menuId}/menudetail
 * Manage Service	
   * create new menu - /Member/{memberId}/Menu/New	
-  * update menu - /Menu/{menuId}/MenuDetail/Update	
-  * delete menu - /DeleteMenu	
+  * update menu - /menu/{menuId}/menuDetail/Update	
+
 
  ## DEPLOY	
 * http://recipe-235414.appspot.com/

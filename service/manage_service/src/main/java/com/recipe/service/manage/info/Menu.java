@@ -25,33 +25,33 @@ public class Menu {
     private String category;
     
 
-    public String getFoodName() {
-        return foodName;
-    }
+//    public String getFoodName() {
+//        return foodName;
+//    }
 
     public void setFoodName(String foodName) {
         this.foodName = foodName;
     }
 
-    public int getTime() {
-        return time;
-    }
+//    public int getTime() {
+//        return time;
+//    }
 
     public void setTime(int time) {
         this.time = time;
     }
 
-    public String getIngredients() {
-        return ingredients;
-    }
+//    public String getIngredients() {
+//        return ingredients;
+//    }
 
     public void setIngredients(String ingredients) {
         this.ingredients = ingredients;
     }
 
-    public String getDirections() {
-        return directions;
-    }
+//    public String getDirections() {
+//        return directions;
+//    }
 
     public void setDirections(String directions) {
         this.directions = directions;
@@ -64,10 +64,10 @@ public class Menu {
     public void setCategory(String type) {
         this.category = type;
     }
-
-    public String getMemberId() {
-        return memberId;
-    }
+//
+//    public String getMemberId() {
+//        return memberId;
+//    }
 
     public void setMemberId(String memberId) {
         this.memberId = memberId;

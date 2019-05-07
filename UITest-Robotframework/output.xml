@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190507 00:48:37.235" generator="Robot 3.1.1 (Python 2.7.10 on win32)">
+<suite source="C:\Users\ASUS\Desktop\Aal\SOA\SOA2019_Group1\UITest-Robotframework\UI-Test.robot" id="s1" name="UI-Test">
+<test id="s1-t1" name="UITest">
+<kw name="เปิดเว็บRecipe">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>localhost:8080/</arg>
+<arg>browser=chrome</arg>
+</arguments>
+<msg timestamp="20190507 00:48:37.690" level="INFO">Opening browser 'chrome' to base url 'localhost:8080/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190507 00:48:37.704" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" endtime="20190507 00:48:37.704" starttime="20190507 00:48:37.703"></status>
+</kw>
+<msg timestamp="20190507 00:48:37.708" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</msg>
+<status status="FAIL" endtime="20190507 00:48:37.709" starttime="20190507 00:48:37.689"></status>
+</kw>
+<status status="FAIL" endtime="20190507 00:48:37.709" starttime="20190507 00:48:37.689"></status>
+</kw>
+<status status="FAIL" endtime="20190507 00:48:37.710" critical="yes" starttime="20190507 00:48:37.688">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</status>
+</test>
+<status status="FAIL" endtime="20190507 00:48:37.715" starttime="20190507 00:48:37.239"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="UI-Test" pass="0">UI-Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
