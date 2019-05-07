@@ -27,6 +27,15 @@ public class Menu {
 
     public Menu(){}
 
+    public Menu(String menuId, String memberId, String foodName, int time, String ingredients, String directions, String category) {
+        this.menuId = menuId;
+        this.memberId = memberId;
+        this.foodName = foodName;
+        this.time = time;
+        this.ingredients = ingredients;
+        this.directions = directions;
+        this.category = category;
+    }
 
     public String getFoodName() {
         return foodName;
