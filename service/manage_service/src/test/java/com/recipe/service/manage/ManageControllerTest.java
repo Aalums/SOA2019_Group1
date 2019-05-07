@@ -2,7 +2,6 @@ package com.recipe.service.manage;
 
 import com.recipe.service.manage.info.MenuFromWeb;
 import com.recipe.service.manage.model.Manage;
-import com.recipe.service.manage.service.ManageService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,9 +25,6 @@ public class ManageControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
-
-    @Autowired
-    ManageService manageService;
 
     @Autowired
     MockMvc mockMvc;

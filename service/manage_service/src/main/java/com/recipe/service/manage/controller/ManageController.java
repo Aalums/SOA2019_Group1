@@ -14,13 +14,12 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.ArrayList;
 
 @RestController
 public class ManageController {
 
     @Autowired
-    private ManageService manageService;
+    ManageService manageService;
 
     private Manage manage;
     private Menu menu;
