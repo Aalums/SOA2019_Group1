@@ -48,10 +48,10 @@ public class Menu {
     public int getTime() {
         return time;
     }
-//
-//    public void setTime(int time) {
-//        this.time = time;
-//    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
 
     public List<String> getIngredients() {
         String _ingredients[] = ingredients.split(",");
@@ -60,9 +60,9 @@ public class Menu {
         return in;
     }
 
-//    public void setIngredients(String ingredients) {
-//        this.ingredients = ingredients;
-//    }
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
+    }
 
     public List<String> getDirections() {
         String _directions [] = directions.split(",");
@@ -71,9 +71,9 @@ public class Menu {
         return di;
     }
 
-//    public void setDirections(String directions) {
-//        this.directions = directions;
-//    }
+    public void setDirections(String directions) {
+        this.directions = directions;
+    }
 
     public String getCategory() {
         return this.category;
