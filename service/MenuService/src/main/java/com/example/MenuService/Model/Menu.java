@@ -27,15 +27,15 @@ public class Menu {
 
     public Menu(){}
 
-    public Menu(String menuId, String memberId, String foodName, int time, String ingredients, String directions, String category) {
-        this.menuId = menuId;
-        this.memberId = memberId;
-        this.foodName = foodName;
-        this.time = time;
-        this.ingredients = ingredients;
-        this.directions = directions;
-        this.category = category;
-    }
+//    public Menu(String menuId, String memberId, String foodName, int time, String ingredients, String directions, String category) {
+//        this.menuId = menuId;
+//        this.memberId = memberId;
+//        this.foodName = foodName;
+//        this.time = time;
+//        this.ingredients = ingredients;
+//        this.directions = directions;
+//        this.category = category;
+//    }
 
     public String getFoodName() {
         return foodName;
@@ -49,9 +49,9 @@ public class Menu {
         return time;
     }
 
-    public void setTime(int time) {
-        this.time = time;
-    }
+//    public void setTime(int time) {
+//        this.time = time;
+//    }
 
     public List<String> getIngredients() {
         String _ingredients[] = ingredients.split(",");
@@ -60,9 +60,9 @@ public class Menu {
         return in;
     }
 
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
-    }
+//    public void setIngredients(String ingredients) {
+//        this.ingredients = ingredients;
+//    }
 
     public List<String> getDirections() {
         String _directions [] = directions.split(",");
@@ -71,9 +71,9 @@ public class Menu {
         return di;
     }
 
-    public void setDirections(String directions) {
-        this.directions = directions;
-    }
+//    public void setDirections(String directions) {
+//        this.directions = directions;
+//    }
 
     public String getCategory() {
         return this.category;

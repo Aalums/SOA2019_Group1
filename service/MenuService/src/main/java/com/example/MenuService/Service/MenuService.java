@@ -16,38 +16,38 @@ public class MenuService {
 
     public MenuService(){}
 
-    public Menu getMenu() {
-        return menu;
-    }
-
-    public void setMenu(Menu menu) {
-        this.menu = menu;
-    }
-
-    public String getCategory(){
-        return "Category";
-}
-
-    public Menu getMenu(String name){
-        menu = new Menu();
-        menu.setFoodName(name);
-        return menu;
-    }
-
-    public String getMenuCategory(String type){
-        return menu.getCategory();
-    }
-
-    public Menu getMenuByMember(String memberId){
-        //get menu from db
-        menu = new Menu();
-        menu.setMemberId(memberId);
-        return menu;
-    }
-
-    public Menu getMenuDetail(String MenuId) {
-        //get menu from db 'menuId'
-        menu = new Menu();
-        return menu;
-    }
+//    public Menu getMenu() {
+//        return menu;
+//    }
+//
+//    public void setMenu(Menu menu) {
+//        this.menu = menu;
+//    }
+//
+//    public String getCategory(){
+//        return "Category";
+//}
+//
+//    public Menu getMenu(String name){
+//        menu = new Menu();
+//        menu.setFoodName(name);
+//        return menu;
+//    }
+//
+//    public String getMenuCategory(String type){
+//        return menu.getCategory();
+//    }
+//
+//    public Menu getMenuByMember(String memberId){
+//        //get menu from db
+//        menu = new Menu();
+//        menu.setMemberId(memberId);
+//        return menu;
+//    }
+//
+//    public Menu getMenuDetail(String MenuId) {
+//        //get menu from db 'menuId'
+//        menu = new Menu();
+//        return menu;
+//    }
 }
