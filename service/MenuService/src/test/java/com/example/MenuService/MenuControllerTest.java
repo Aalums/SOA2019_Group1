@@ -73,7 +73,7 @@ public class MenuControllerTest {
 
     @Test
     public void getMenuDetail() throws Exception{
-        int status = httpStatus("/menu/menu/f000001/menudetail");
+        int status = httpStatus("/menu/menu/f0000001/menudetail");
         Assert.assertEquals(200,status);
     }
 
